@@ -3,23 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TssY | Portfolio</title>
+  <title>TssY Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="background-glow"></div>
+<div class="background-noise"></div>
+<div class="brush brush-one"></div>
+<div class="brush brush-two"></div>
 
 <header class="hero">
-  <div class="profile-card">
-    <img id="profileImage" src="" alt="Profile" class="profile-img">
-    <h1 id="username"></h1>
-    <p id="subtitle" class="subtitle"></p>
+  <div class="profile-wrapper">
+    <div class="ring"></div>
+    <img id="profileImage" class="profile-image" alt="Profile">
+  </div>
 
-    <div class="hero-buttons">
-      <a href="#services" class="btn primary">My Services</a>
-      <a href="#contact" class="btn secondary">Contact</a>
-    </div>
+  <h1 id="username"></h1>
+  <p id="subtitle"></p>
+
+  <div class="hero-buttons">
+    <a href="#services" class="button filled">Services</a>
+    <a href="#contact" class="button outline">Contact</a>
   </div>
 </header>
 
@@ -31,72 +35,78 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="about" class="section glass">
-  <h2>About Me</h2>
+<section id="about" class="section">
+  <h2>About</h2>
   <p>
-    I specialize in professional Discord bot systems, community infrastructure,
-    Minecraft server development and polished digital experiences.
+    I create premium Discord systems, professional community structures,
+    Minecraft infrastructure and polished digital environments with a clean
+    aesthetic and reliable backend.
   </p>
 </section>
 
-<section id="services" class="section glass">
+<section id="services" class="section">
   <h2>Services</h2>
   <div class="grid">
     <div class="card">
       <h3>Discord Bot Development</h3>
-      <p>Advanced bots built with Python and Discord.py.</p>
+      <p>Custom automation, moderation, ticket systems and advanced integrations.</p>
     </div>
 
     <div class="card">
       <h3>Discord Server Development</h3>
-      <p>Premium community server setups with automation.</p>
+      <p>Modern server structures designed for premium communities.</p>
+    </div>
+
+    <div class="card">
+      <h3>Server Management</h3>
+      <p>Long-term maintenance, moderation and growth optimization.</p>
     </div>
 
     <div class="card">
       <h3>Minecraft Development</h3>
-      <p>Professional server setup and management.</p>
+      <p>Complete server setup, plugin systems and management.</p>
     </div>
   </div>
 </section>
 
-<section id="skills" class="section glass">
-  <h2>Technical Skills</h2>
+<section id="skills" class="section">
+  <h2>Skills</h2>
 
-  <div class="skill-box">
+  <div class="skill">
     <span>Python</span>
-    <div class="bar"><div class="fill" style="width:95%"></div></div>
+    <div class="progress"><div class="progress-fill" style="width:95%"></div></div>
   </div>
 
-  <div class="skill-box">
+  <div class="skill">
     <span>Discord.py</span>
-    <div class="bar"><div class="fill" style="width:92%"></div></div>
+    <div class="progress"><div class="progress-fill" style="width:92%"></div></div>
   </div>
 
-  <div class="skill-box">
+  <div class="skill">
     <span>HTML / CSS</span>
-    <div class="bar"><div class="fill" style="width:88%"></div></div>
+    <div class="progress"><div class="progress-fill" style="width:88%"></div></div>
   </div>
 </section>
 
-<section id="projects" class="section glass">
+<section id="projects" class="section">
   <h2>Projects</h2>
   <div class="grid">
     <div class="card">
       <h3>Support Bot</h3>
-      <p>Custom ticket and moderation system.</p>
+      <p>Custom ticketing and moderation system for active communities.</p>
     </div>
 
     <div class="card">
-      <h3>Community Setup</h3>
-      <p>Professional Discord infrastructure.</p>
+      <h3>Premium Setup</h3>
+      <p>High-end Discord server design and structure implementation.</p>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section glass">
+<section id="contact" class="section">
   <h2>Contact</h2>
-  <p>Interested in working together?</p>
-  <a href="#" class="btn primary">Contact Me</a>
+  <p>Interested in building something professional together?</p>
+  <a href="#" class="button filled">Get In Touch</a>
 </section>
 
 <script src="script.js"></script>
