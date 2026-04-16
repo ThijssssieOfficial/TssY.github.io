@@ -6,50 +6,60 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!sidebar || !openBtn || !closeBtn) return;
 
-  let isOpen = false;
+  // SINGLE SOURCE OF TRUTH
+  let open = false;
 
-  function openSidebar(){
-    sidebar.classList.add("active");
-    isOpen = true;
+  function renderSidebar() {
+    sidebar.classList.toggle("active", open);
   }
 
-  function closeSidebar(){
-    sidebar.classList.remove("active");
-    isOpen = false;
+  function toggleSidebar() {
+    open = !open;
+    renderSidebar();
   }
 
-  // OPEN
+  function closeSidebar() {
+    open = false;
+    renderSidebar();
+  }
+
+  function openSidebar() {
+    open = true;
+    renderSidebar();
+  }
+
+  // OPEN BUTTON = TOGGLE (belangrijk!)
   openBtn.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
-    openSidebar();
+    toggleSidebar();
   });
 
-  // CLOSE BUTTON
+  // CLOSE BUTTON = ALWAYS CLOSE
   closeBtn.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
     closeSidebar();
   });
 
-  // CLICK OUTSIDE CLOSE (ROBUST)
+  // CLICK OUTSIDE = CLOSE
   document.addEventListener("click", (e) => {
-    if (!isOpen) return;
+    if (!open) return;
 
-    const clickedInsideSidebar = sidebar.contains(e.target);
+    const clickedInside = sidebar.contains(e.target);
     const clickedButton = openBtn.contains(e.target);
 
-    if (!clickedInsideSidebar && !clickedButton) {
+    if (!clickedInside && !clickedButton) {
       closeSidebar();
     }
   });
 
-  // STOP SIDEBAR CLICK PROPAGATION
+  // PREVENT INNER SIDEBAR CLOSING BY CLICK BUBBLE
   sidebar.addEventListener("click", (e) => {
     e.stopPropagation();
   });
 
-  // SMOOTH SCROLL (SAFE)
+  // SMOOTH SCROLL NAV LINKS
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", (e) => {
 
