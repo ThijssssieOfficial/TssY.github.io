@@ -14,7 +14,7 @@ document.addEventListener("click", (e) => {
 });
 
 window.addEventListener("load", () => {
-  document.querySelectorAll(".fill").forEach(el => {
-    el.style.width = el.dataset.width + "%";
+  document.querySelectorAll(".fill").forEach(bar => {
+    bar.style.width = bar.dataset.width + "%";
   });
 });
