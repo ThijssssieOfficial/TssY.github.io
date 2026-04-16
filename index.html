@@ -4,102 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Website titel aanpassen -->
-  <title>TssY | Portfolio</title>
+  <!-- TITLE: pas je naam hier aan -->
+  <title>Portfolio | TssY</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Achtergrond design -->
-<div class="background"></div>
-<div class="brush brush1"></div>
-<div class="brush brush2"></div>
+<!-- BACKGROUND -->
+<div class="bg"></div>
+<div class="brush b1"></div>
+<div class="brush b2"></div>
 
-<!-- Sidebar knop -->
-<button id="menuButton" class="menu-button">☰</button>
+<!-- SIDEBAR BUTTON -->
+<button id="openSidebar" class="menu-btn">☰</button>
 
-<!-- Sidebar -->
-<aside id="sidebar" class="sidebar">
-  <button id="closeButton" class="close-button">×</button>
-
-  <h2>Navigation</h2>
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+  <button id="closeSidebar" class="close-btn">×</button>
 
   <a href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
-</aside>
+</div>
 
-<!-- Homepage -->
+<!-- HOME -->
 <section id="home" class="hero reveal">
-  <div class="profile-wrapper">
-    <!-- Profielfoto -->
-    <img src="images/profile.png" alt="Profile" class="profile-image">
-  </div>
+  <img src="images/profile.png" class="pfp" alt="profile">
 
-  <!-- Naam aanpassen -->
+  <!-- NAME -->
   <h1>TssY.</h1>
 
-  <!-- Subtitel aanpassen -->
-  <p>Discord • Minecraft • Development</p>
+  <!-- SUBTITLE -->
+  <p class="sub">Discord • Minecraft • Developer</p>
 
-  <div class="hero-buttons">
-    <a href="#services" class="btn primary">View Services</a>
-    <a href="#contact" class="btn secondary">Contact</a>
+  <div class="buttons">
+    <a href="#services" class="btn primary">Services</a>
+    <a href="#contact" class="btn outline">Contact</a>
   </div>
 </section>
 
-<!-- About -->
+<!-- ABOUT -->
 <section id="about" class="section reveal">
-  <h2>About Me</h2>
+  <h2>About</h2>
   <p>
-    I create premium Discord servers, advanced bot systems,
-    professional Minecraft setups and modern websites.
-    My work focuses on clean design, stable systems and a professional experience.
+    I build Discord bots, servers, Minecraft systems and modern websites.
+    Focused on clean design, performance and reliable systems.
   </p>
 </section>
 
-<!-- Services -->
+<!-- SERVICES -->
 <section id="services" class="section reveal">
   <h2>Services</h2>
 
   <div class="grid">
     <div class="card">
-      <h3>Discord Bot Development</h3>
-      <p>Custom Discord bots using Python and Discord.py with moderation, tickets and automation.</p>
+      <h3>Discord Bots</h3>
+      <p>Automation, moderation, tickets, economy systems.</p>
     </div>
 
     <div class="card">
-      <h3>Discord Server Development</h3>
-      <p>Professional server layouts, permissions and premium structures.</p>
-    </div>
-
-    <div class="card">
-      <h3>Server Management</h3>
-      <p>Long-term community management and optimization.</p>
+      <h3>Discord Servers</h3>
+      <p>Professional setups with clean structure and roles.</p>
     </div>
 
     <div class="card">
       <h3>Minecraft Setup</h3>
-      <p>Complete Paper / Spigot setup and plugin configuration.</p>
+      <p>Paper/Spigot servers, plugins, optimization.</p>
     </div>
 
     <div class="card">
-      <h3>Minecraft Development</h3>
-      <p>Advanced server systems and backend configuration.</p>
-    </div>
-
-    <div class="card">
-      <h3>Website Development</h3>
-      <p>Modern websites using HTML, CSS and JavaScript.</p>
+      <h3>Web Dev</h3>
+      <p>Modern responsive websites.</p>
     </div>
   </div>
 </section>
 
-<!-- Skills -->
+<!-- SKILLS -->
 <section id="skills" class="section reveal">
   <h2>Skills</h2>
 
@@ -110,7 +94,7 @@
 
   <div class="skill">
     <span>Discord.py</span>
-    <div class="bar"><div class="fill" style="width:92%"></div></div>
+    <div class="bar"><div class="fill" style="width:93%"></div></div>
   </div>
 
   <div class="skill">
@@ -119,47 +103,17 @@
   </div>
 
   <div class="skill">
-    <span>Minecraft Setup</span>
-    <div class="bar"><div class="fill" style="width:91%"></div></div>
-  </div>
-
-  <div class="skill">
-    <span>Minecraft Management</span>
-    <div class="bar"><div class="fill" style="width:89%"></div></div>
+    <span>Minecraft</span>
+    <div class="bar"><div class="fill" style="width:90%"></div></div>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="section reveal">
-  <h2>Projects</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Advanced Ticket Bot</h3>
-      <p>Multi-category support system with transcripts and logging.</p>
-    </div>
-
-    <div class="card">
-      <h3>Community Server Build</h3>
-      <p>Premium Discord infrastructure with automation.</p>
-    </div>
-
-    <div class="card">
-      <h3>Minecraft Network</h3>
-      <p>Optimized multi-server setup with permissions.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
+<!-- CONTACT -->
 <section id="contact" class="section reveal">
   <h2>Contact</h2>
-  <p>Interested in working together?</p>
 
-  <div class="hero-buttons">
-    <a href="#" class="btn primary">Discord</a>
-    <a href="#" class="btn secondary">Email</a>
-  </div>
+  <a class="btn primary" href="#">Discord</a>
+  <a class="btn outline" href="#">Email</a>
 </section>
 
 <script src="script.js"></script>
