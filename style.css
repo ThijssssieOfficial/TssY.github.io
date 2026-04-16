@@ -21,7 +21,6 @@ body{
   z-index:-3;
 }
 
-/* BRUSH EFFECTS */
 .brush{
   position:fixed;
   width:800px;
@@ -34,12 +33,12 @@ body{
 .b1{top:120px;left:-250px;transform:rotate(-10deg);}
 .b2{top:350px;right:-250px;transform:rotate(10deg);}
 
-/* SIDEBAR */
+/* MENU */
 .menu-btn{
   position:fixed;
   top:20px;
   left:20px;
-  z-index:1000;
+  z-index:2000;
   background:#111;
   color:white;
   border:none;
@@ -48,6 +47,7 @@ body{
   cursor:pointer;
 }
 
+/* SIDEBAR FIXED BEHAVIOR */
 .sidebar{
   position:fixed;
   top:0;
@@ -56,8 +56,8 @@ body{
   height:100%;
   background:#0b0b0b;
   padding:25px;
-  transition:0.35s;
-  z-index:999;
+  transition:0.35s ease;
+  z-index:1500;
 }
 
 .sidebar.active{
@@ -100,14 +100,9 @@ body{
   margin-bottom:20px;
 }
 
-h1{
-  font-size:3.5rem;
-}
-
-.sub{
-  color:#aaa;
-  margin:15px 0 30px;
-}
+/* TEXT */
+h1{font-size:3.5rem;}
+.sub{color:#aaa;margin:15px 0 30px;}
 
 /* SECTIONS */
 .section{
@@ -137,9 +132,7 @@ h1{
 }
 
 /* SKILLS */
-.skill{
-  margin-bottom:18px;
-}
+.skill{margin-bottom:18px;}
 
 .bar{
   height:10px;
@@ -164,28 +157,14 @@ h1{
   transition:0.3s;
 }
 
-.primary{
-  background:white;
-  color:black;
-}
-
-.outline{
-  border:1px solid white;
-  color:white;
-}
+.primary{background:white;color:black;}
+.outline{border:1px solid white;color:white;}
 
 .btn:hover{
   transform:translateY(-3px);
 }
 
-/* REVEAL */
+/* REVEAL (veilig houden zodat niets breekt) */
 .reveal{
   opacity:1;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  h1{font-size:2.5rem;}
-  .section{margin:20px;padding:25px;}
-  .pfp{width:120px;height:120px;}
 }
