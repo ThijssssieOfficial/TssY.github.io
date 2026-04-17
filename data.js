@@ -4,7 +4,7 @@ const portfolioData = {
     "sub": "Discord • Minecraft • Developer"
   },
   "about": {
-    "text": "Developer focused on Discord bots, Minecraft systems and modern web applications. Clean architecture, performance-driven logic and scalable systems.\ntest",
+    "text": "Developer focused on Discord bots, Minecraft systems and modern web applications. Clean architecture, performance-driven logic and scalable systems.\ntestt",
     "highlights": [
       "System design focused",
       "Automation & bots",
