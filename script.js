@@ -317,13 +317,16 @@ if (openAdminLoginBtn) openAdminLoginBtn.onclick = () => toggleOverlay(adminLogi
 // Login Logic
 if (loginBtn) {
   loginBtn.onclick = () => {
-    const pass = document.getElementById('adminPassword').value;
-    if (pass === 'admin123') { // Simple hardcoded password
+    const passwordInput = document.getElementById('adminPassword');
+    const pass = passwordInput.value;
+    if (pass === 'Boring.123') { 
+      passwordInput.value = ''; // Clear field on success
       toggleOverlay(adminLoginOverlay, false);
       toggleOverlay(adminDashboard, true);
       initDashboard();
     } else {
       alert('ACCESS DENIED. INCORRECT CODE.');
+      passwordInput.value = ''; // Clear field on failure
     }
   };
 }
