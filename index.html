@@ -7,14 +7,17 @@
   <title>Portfolio | TssY</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- BACKGROUND -->
-<div class="bg"></div>
+<!-- BACKGROUND CANVAS -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- MOON / SUN (DECORATIVE) -->
+<div class="background-moon"></div>
 
 <!-- SIDEBAR -->
 <button id="openSidebar" class="menu-btn">
@@ -50,7 +53,7 @@
 </header>
 
 <!-- ABOUT -->
-<section id="about" class="section reveal">
+<section id="about" class="section reveal" data-label="STORY">
   <h2><span class="brush-accent">About</span></h2>
   <p>
     Developer focused on Discord bots, Minecraft systems and modern web applications.
@@ -66,7 +69,7 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section reveal">
+<section id="experience" class="section reveal" data-label="TIMELINE">
   <h2><span class="brush-accent">Experience</span></h2>
   <div class="timeline">
     <div class="timeline-item">
@@ -88,7 +91,7 @@
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section reveal">
+<section id="services" class="section reveal" data-label="OFFERING">
   <h2><span class="brush-accent">Services</span></h2>
 
   <div class="grid">
@@ -115,7 +118,7 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section reveal">
+<section id="projects" class="section reveal" data-label="WORKS">
   <h2><span class="brush-accent">Projects</span></h2>
 
   <div class="grid">
@@ -139,7 +142,7 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section reveal">
+<section id="skills" class="section reveal" data-label="ARSENAL">
   <h2><span class="brush-accent">Skills</span></h2>
 
   <div class="skill">
@@ -164,7 +167,7 @@
 </section>
 
 <!-- STATS -->
-<section id="stats" class="section reveal">
+<section id="stats" class="section reveal" data-label="RECORD">
   <h2><span class="brush-accent">Stats</span></h2>
 
   <div class="stats">
@@ -188,14 +191,14 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section reveal">
+<section id="contact" class="section reveal" data-label="CONNECT">
   <h2><span class="brush-accent">Contact</span></h2>
   <p style="margin-bottom: 30px; color: var(--text-secondary);">Ready to start your next project? Let's connect.</p>
   <div class="buttons">
-     <a class="btn primary" href="#">Discord</a>
-     <a class="btn outline" href="#">Email</a>
-   </div>
- </section>
+    <a class="btn primary" href="#">Discord</a>
+    <a class="btn outline" href="#">Email</a>
+  </div>
+</section>
 
  <button id="backToTop" class="back-to-top">↑</button>
 
