@@ -178,3 +178,47 @@ document.addEventListener('mousemove', (e) => {
   if (moon) moon.style.transform = `translate(${x}px, ${y}px)`;
   if (heroPfp) heroPfp.style.transform = `translate(${-x/2}px, ${-y/2}px)`;
 });
+
+// --- OVERLAY SYSTEM ---
+const discordOverlay = document.getElementById('discordOverlay');
+const contactOverlay = document.getElementById('contactOverlay');
+const openDiscordBtn = document.getElementById('openDiscordOverlay');
+const openContactBtn = document.getElementById('openContactOverlay');
+const closeOverlayBtns = document.querySelectorAll('.close-overlay');
+const copyDiscordBtn = document.getElementById('copyDiscordBtn');
+
+const toggleOverlay = (overlay, state) => {
+  if (overlay) {
+    overlay.classList.toggle('active', state);
+    document.body.style.overflow = state ? 'hidden' : '';
+  }
+};
+
+if (openDiscordBtn) openDiscordBtn.onclick = () => toggleOverlay(discordOverlay, true);
+if (openContactBtn) openContactBtn.onclick = () => toggleOverlay(contactOverlay, true);
+
+closeOverlayBtns.forEach(btn => {
+  btn.onclick = () => {
+    toggleOverlay(discordOverlay, false);
+    toggleOverlay(contactOverlay, false);
+  };
+});
+
+// Close overlay on background click
+window.onclick = (e) => {
+  if (e.target === discordOverlay) toggleOverlay(discordOverlay, false);
+  if (e.target === contactOverlay) toggleOverlay(contactOverlay, false);
+};
+
+// Copy Discord Username logic
+if (copyDiscordBtn) {
+  copyDiscordBtn.onclick = () => {
+    navigator.clipboard.writeText('Thijssssie_official');
+    const originalText = copyDiscordBtn.innerText;
+    copyDiscordBtn.innerText = 'COPIED!';
+    copyDiscordBtn.classList.add('primary');
+    setTimeout(() => {
+      copyDiscordBtn.innerText = originalText;
+    }, 2000);
+  };
+}
