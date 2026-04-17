@@ -5,6 +5,12 @@ const sidebarLinks = document.querySelectorAll(".sidebar a");
 
 // --- RENDER CONTENT FROM DATA.JS ---
 const renderContent = () => {
+  // Check localStorage first for persistence across refreshes
+  const savedData = localStorage.getItem('portfolioData');
+  if (savedData) {
+    window.portfolioData = JSON.parse(savedData);
+  }
+  
   const data = window.portfolioData;
   if (!data) return;
 
@@ -399,14 +405,28 @@ if (generateUpdateBtn) {
     const scriptContent = `const portfolioData = ${JSON.stringify(data, null, 2)};\n\nwindow.portfolioData = portfolioData;`;
     navigator.clipboard.writeText(scriptContent);
     
+    // Save to localStorage for browser persistence
+    localStorage.setItem('portfolioData', JSON.stringify(data));
+    
     const originalText = generateUpdateBtn.innerText;
-    generateUpdateBtn.innerText = 'COPIED TO CLIPS!';
+    generateUpdateBtn.innerText = 'SAVED & COPIED!';
     setTimeout(() => {
       generateUpdateBtn.innerText = originalText;
-      alert('CONTENT SCROLL GENERATED. COMMIT TO GITHUB TO APPLY CHANGES.');
+      alert('SUCCESS: Changes saved to browser and copied to clipboard. To make them permanent for EVERYONE, you must still paste the copied code into data.js on GitHub.');
       window.portfolioData = data;
       renderContent();
     }, 1500);
+  };
+}
+
+// Reset Data Logic
+const resetDataBtn = document.getElementById('resetDataBtn');
+if (resetDataBtn) {
+  resetDataBtn.onclick = () => {
+    if (confirm('RESET ALL CHANGES? This will restore the original data from data.js.')) {
+      localStorage.removeItem('portfolioData');
+      location.reload();
+    }
   };
 }
 
