@@ -48,7 +48,7 @@
 
   <div class="buttons">
     <a href="#projects" class="btn primary">Work</a>
-    <a href="contact.html" class="btn outline">Contact</a>
+    <a href="#contact" class="btn outline">Contact</a>
   </div>
 </header>
 
@@ -195,12 +195,51 @@
   <h2><span class="brush-accent">Contact</span></h2>
   <p style="margin-bottom: 30px; color: var(--text-secondary);">Ready to start your next project? Let's connect.</p>
   <div class="buttons">
-    <a class="btn primary" href="discord.html">Discord</a>
-    <a class="btn outline" href="contact.html">Contact Me</a>
+    <button class="btn primary" id="openDiscordOverlay">Discord</button>
+    <button class="btn outline" id="openContactOverlay">Contact Me</button>
   </div>
 </section>
 
- <button id="backToTop" class="back-to-top">↑</button>
+<!-- OVERLAYS -->
+<div id="discordOverlay" class="overlay">
+  <div class="overlay-content discord-card">
+    <button class="close-overlay">×</button>
+    <h2><span class="brush-accent">Discord</span></h2>
+    <div class="discord-tag">Thijssssie_official</div>
+    <div class="extra-info">
+      <p><span class="status-dot"></span> Available for new projects and commissions.</p>
+      <p>Average response time: &lt; 2 hours</p>
+      <p>Specializing in Discord Bot architecture and Minecraft server systems.</p>
+    </div>
+    <div class="buttons">
+      <button class="btn primary" id="copyDiscordBtn">Copy Username</button>
+    </div>
+  </div>
+</div>
+
+<div id="contactOverlay" class="overlay">
+  <div class="overlay-content contact-form-container">
+    <button class="close-overlay">×</button>
+    <h2><span class="brush-accent">Contact</span></h2>
+    <form action="https://formspree.io/thijssssie123@gmail.com" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="YOUR NAME" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="PROJECT TYPE" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="TELL ME ABOUT YOUR PROJECT" required></textarea>
+      </div>
+      <button type="submit" class="btn primary submit-btn">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<button id="backToTop" class="back-to-top">↑</button>
 
  <script src="script.js"></script>
  </body>
