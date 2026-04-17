@@ -470,17 +470,23 @@ h2::before {
   outline: none;
 }
 
-.primary {
-  background: var(--accent-color) !important;
+.primary, 
+button.primary,
+.btn.primary {
+  background: #ffffff !important;
   color: #000000 !important; /* Force black text on white button */
 }
 
-.primary::after {
+.primary::after,
+button.primary::after,
+.btn.primary::after {
   display: none; /* Remove the black background slide-in to keep it white/black */
 }
 
-.primary:hover {
-  background: #eeeeee !important; /* Slightly darker white on hover */
+.primary:hover,
+button.primary:hover,
+.btn.primary:hover {
+  background: #eeeeee !important; 
   color: #000000 !important;
 }
 
