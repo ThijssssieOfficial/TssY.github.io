@@ -765,6 +765,26 @@ h2::before {
   cursor: pointer;
 }
 
+/* CONTACT SECTION DYNAMIC VISIBILITY */
+#contact {
+  opacity: 0;
+  transform: translateY(100px) scale(0.9);
+  pointer-events: none;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-top: 100px;
+}
+
+#contact.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+#contact.revealed.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   h1 { font-size: 4rem; }
