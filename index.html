@@ -37,14 +37,15 @@
   <a href="#skills">Skills</a>
   <a href="#stats">Stats</a>
   <a href="#contact">Contact</a>
+  <button id="openAdminLogin" class="admin-login-trigger">Admin</button>
 </div>
 
 <!-- HERO -->
 <header id="home" class="hero reveal">
   <img src="images/profile.png" class="pfp" alt="profile">
 
-  <h1>TssY.</h1>
-  <p class="sub">Discord • Minecraft • Developer</p>
+  <h1 id="hero-name"></h1>
+  <p class="sub" id="hero-sub"></p>
 
   <div class="buttons">
     <a href="#projects" class="btn primary">Work</a>
@@ -55,139 +56,39 @@
 <!-- ABOUT -->
 <section id="about" class="section reveal" data-label="STORY">
   <h2><span class="brush-accent">About</span></h2>
-  <p>
-    Developer focused on Discord bots, Minecraft systems and modern web applications.
-    Clean architecture, performance-driven logic and scalable systems.
-  </p>
+  <p id="about-text"></p>
 
-  <div class="info-grid">
-    <div class="info">System design focused</div>
-    <div class="info">Automation & bots</div>
-    <div class="info">Minecraft engineering</div>
-    <div class="info">Web development</div>
-  </div>
+  <div class="info-grid" id="about-highlights"></div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience" class="section reveal" data-label="TIMELINE">
   <h2><span class="brush-accent">Experience</span></h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-date">2023 - Present</div>
-      <h3>Lead Developer</h3>
-      <p>Architecting complex Discord bot systems and Minecraft server optimizations for high-traffic environments.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-date">2021 - 2023</div>
-      <h3>Freelance Developer</h3>
-      <p>Delivered 50+ custom projects ranging from automation tools to responsive web applications.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-date">2020 - 2021</div>
-      <h3>Community Manager & Tech Lead</h3>
-      <p>Managed large-scale Minecraft communities, handling both technical infrastructure and community growth.</p>
-    </div>
-  </div>
+  <div class="timeline" id="experience-list"></div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section reveal" data-label="OFFERING">
   <h2><span class="brush-accent">Services</span></h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Discord Bots</h3>
-      <p>Moderation, economy, tickets, automation systems. Built with Python and JavaScript.</p>
-    </div>
-
-    <div class="card">
-      <h3>Discord Servers</h3>
-      <p>Clean setups with roles, structure and configuration. Optimized for user retention.</p>
-    </div>
-
-    <div class="card">
-      <h3>Minecraft</h3>
-      <p>Plugin systems, performance optimization and custom server infrastructure.</p>
-    </div>
-
-    <div class="card">
-      <h3>Web Dev</h3>
-      <p>Modern responsive UI and frontend systems. Focus on performance and clean code.</p>
-    </div>
-  </div>
+  <div class="grid" id="services-list"></div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="section reveal" data-label="WORKS">
   <h2><span class="brush-accent">Projects</span></h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Discord Guardian</h3>
-      <p>Advanced moderation bot with machine learning for spam detection.</p>
-    </div>
-    <div class="card">
-      <h3>SkyBlock Engine</h3>
-      <p>Custom Minecraft plugin suite for highly scalable game modes.</p>
-    </div>
-    <div class="card">
-      <h3>Nexus Portal</h3>
-      <p>A central dashboard for managing multiple game servers and bots.</p>
-    </div>
-    <div class="card">
-      <h3>Task Automator</h3>
-      <p>Python-based suite for streamlining repetitive development workflows.</p>
-    </div>
-  </div>
+  <div class="grid" id="projects-list"></div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="section reveal" data-label="ARSENAL">
   <h2><span class="brush-accent">Skills</span></h2>
-
-  <div class="skill">
-    <span>Python / Discord.py</span>
-    <div class="bar"><div class="fill" data-width="95"></div></div>
-  </div>
-
-  <div class="skill">
-    <span>JavaScript / TypeScript</span>
-    <div class="bar"><div class="fill" data-width="90"></div></div>
-  </div>
-
-  <div class="skill">
-    <span>HTML / CSS / React</span>
-    <div class="bar"><div class="fill" data-width="88"></div></div>
-  </div>
-
-  <div class="skill">
-    <span>Minecraft Development</span>
-    <div class="bar"><div class="fill" data-width="92"></div></div>
-  </div>
+  <div id="skills-list"></div>
 </section>
 
 <!-- STATS -->
 <section id="stats" class="section reveal" data-label="RECORD">
   <h2><span class="brush-accent">Stats</span></h2>
-
-  <div class="stats">
-    <div>
-      <h3>50+</h3>
-      <p>Projects</p>
-    </div>
-    <div>
-      <h3>20+</h3>
-      <p>Bots</p>
-    </div>
-    <div>
-      <h3>10+</h3>
-      <p>Servers</p>
-    </div>
-    <div>
-      <h3>3+</h3>
-      <p>Years Exp</p>
-    </div>
-  </div>
+  <div class="stats" id="stats-list"></div>
 </section>
 
 <!-- CONTACT -->
@@ -257,6 +158,74 @@
 
 <button id="backToTop" class="back-to-top">↑</button>
 
+<!-- ADMIN LOGIN OVERLAY -->
+<div id="adminLoginOverlay" class="overlay">
+  <div class="overlay-content login-card">
+    <button class="close-overlay">×</button>
+    <h2><span class="brush-accent">Access</span></h2>
+    <p style="margin-bottom: 20px; color: var(--text-secondary); font-size: 0.8rem; letter-spacing: 2px;">RESTRICTED AREA</p>
+    <div class="form-group">
+      <input type="password" id="adminPassword" placeholder="ENTER ACCESS CODE">
+    </div>
+    <button class="btn primary" id="loginBtn">Authenticate</button>
+  </div>
+</div>
+
+<!-- ADMIN DASHBOARD OVERLAY -->
+<div id="adminDashboard" class="overlay">
+  <div class="overlay-content dashboard-container">
+    <button class="close-overlay">×</button>
+    <div class="dashboard-header">
+      <h2><span class="brush-accent">Dashboard</span></h2>
+      <button class="btn primary" id="generateUpdateBtn">Generate Update</button>
+    </div>
+    
+    <div class="dashboard-tabs">
+      <button class="tab-btn active" data-tab="hero-tab">Hero</button>
+      <button class="tab-btn" data-tab="about-tab">About</button>
+      <button class="tab-btn" data-tab="stats-tab">Stats</button>
+      <button class="tab-btn" data-tab="skills-tab">Skills</button>
+      <button class="tab-btn" data-tab="projects-tab">Projects</button>
+    </div>
+
+    <div class="tab-content active" id="hero-tab">
+      <div class="form-group">
+        <label>Hero Name</label>
+        <input type="text" id="edit-hero-name">
+      </div>
+      <div class="form-group">
+        <label>Hero Subtext</label>
+        <input type="text" id="edit-hero-sub">
+      </div>
+    </div>
+
+    <div class="tab-content" id="about-tab">
+      <div class="form-group">
+        <label>About Description</label>
+        <textarea id="edit-about-text"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Highlights (Comma separated)</label>
+        <input type="text" id="edit-about-highlights">
+      </div>
+    </div>
+
+    <div class="tab-content" id="stats-tab">
+      <div id="edit-stats-container"></div>
+    </div>
+
+    <div class="tab-content" id="skills-tab">
+      <div id="edit-skills-container"></div>
+    </div>
+
+    <div class="tab-content" id="projects-tab">
+      <div id="edit-projects-container"></div>
+      <button class="btn outline" id="add-project-btn">+ Add Project</button>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
 <script>
   window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
   formspree('initForm', { formElement: '#contact-form', formId: 'xkokrznq' });
