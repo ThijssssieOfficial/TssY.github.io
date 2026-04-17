@@ -221,26 +221,42 @@
   <div class="overlay-content contact-form-container">
     <button class="close-overlay">×</button>
     <h2><span class="brush-accent">Contact</span></h2>
-    <form action="https://formspree.io/thijssssie123@gmail.com" method="POST">
+    
+    <div data-fs-success style="display: none; color: #43b581; font-family: var(--font-display); text-align: center; margin-bottom: 20px; letter-spacing: 2px;">
+      MESSAGE SENT. HONOR TO YOU.
+    </div>
+    <div data-fs-error style="display: none; color: #ff4d4d; font-family: var(--font-display); text-align: center; margin-bottom: 20px; letter-spacing: 2px;">
+      ERROR IN TRANSMISSION.
+    </div>
+
+    <form id="contact-form">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="YOUR NAME" required>
+        <input type="text" id="name" name="name" placeholder="YOUR NAME" data-fs-field required>
+        <span data-fs-error="name" style="color: #ff4d4d; font-size: 0.7rem;"></span>
       </div>
       <div class="form-group">
         <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="PROJECT TYPE" required>
+        <input type="text" id="subject" name="subject" placeholder="PROJECT TYPE" data-fs-field required>
+        <span data-fs-error="subject" style="color: #ff4d4d; font-size: 0.7rem;"></span>
       </div>
       <div class="form-group">
         <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="TELL ME ABOUT YOUR PROJECT" required></textarea>
+        <textarea id="message" name="message" placeholder="TELL ME ABOUT YOUR PROJECT" data-fs-field required></textarea>
+        <span data-fs-error="message" style="color: #ff4d4d; font-size: 0.7rem;"></span>
       </div>
-      <button type="submit" class="btn primary submit-btn">Send Message</button>
+      <button type="submit" class="btn primary submit-btn" data-fs-submit-btn>Send Message</button>
     </form>
   </div>
 </div>
 
 <button id="backToTop" class="back-to-top">↑</button>
 
- <script src="script.js"></script>
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'xkokrznq' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+<script src="script.js"></script>
  </body>
  </html>
