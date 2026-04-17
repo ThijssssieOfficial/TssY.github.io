@@ -198,6 +198,8 @@ body {
   filter: grayscale(1) contrast(1.2);
   transition: var(--transition);
   position: relative;
+  background: var(--card-bg); /* Fallback color */
+  object-fit: cover; /* Ensures image isn't stretched */
 }
 
 .pfp:hover {
