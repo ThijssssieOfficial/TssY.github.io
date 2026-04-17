@@ -351,26 +351,57 @@ const initDashboard = () => {
 
   // Stats
   const statsEdit = document.getElementById('edit-stats-container');
-  statsEdit.innerHTML = data.stats.map((s, i) => `
+  renderEditStats();
+
+  // Skills
+  const skillsEdit = document.getElementById('edit-skills-container');
+  renderEditSkills();
+
+  // Projects
+  renderEditProjects();
+};
+
+const renderEditStats = () => {
+  const statsEdit = document.getElementById('edit-stats-container');
+  statsEdit.innerHTML = window.portfolioData.stats.map((s, i) => `
     <div class="dashboard-item">
+      <span class="remove-item" onclick="removeStat(${i})">×</span>
       <input type="text" value="${s.number}" id="stat-num-${i}">
       <input type="text" value="${s.label}" id="stat-label-${i}">
     </div>
   `).join('');
+};
 
-  // Skills
+window.removeStat = (index) => {
+  window.portfolioData.stats.splice(index, 1);
+  renderEditStats();
+};
+
+document.getElementById('add-stat-btn').onclick = () => {
+  window.portfolioData.stats.push({ number: '0', label: 'New Stat' });
+  renderEditStats();
+};
+
+const renderEditSkills = () => {
   const skillsEdit = document.getElementById('edit-skills-container');
-  skillsEdit.innerHTML = data.skills.map((s, i) => `
+  skillsEdit.innerHTML = window.portfolioData.skills.map((s, i) => `
     <div class="dashboard-item">
+      <span class="remove-item" onclick="removeSkill(${i})">×</span>
       <input type="text" value="${s.name}" id="skill-name-${i}">
       <input type="range" min="0" max="100" value="${s.level}" id="skill-level-${i}" oninput="updateSkillVal(${i}, this.value)">
       <span id="skill-val-${i}">${s.level}%</span>
     </div>
   `).join('');
+};
 
-  // Projects
-  const projectsEdit = document.getElementById('edit-projects-container');
-  renderEditProjects();
+window.removeSkill = (index) => {
+  window.portfolioData.skills.splice(index, 1);
+  renderEditSkills();
+};
+
+document.getElementById('add-skill-btn').onclick = () => {
+  window.portfolioData.skills.push({ name: 'New Skill', level: 50 });
+  renderEditSkills();
 };
 
 const renderEditProjects = () => {
@@ -410,7 +441,7 @@ if (generateUpdateBtn) {
         text: document.getElementById('edit-about-text').value,
         highlights: document.getElementById('edit-about-highlights').value.split(',').map(h => h.trim())
       },
-      experience: window.portfolioData.experience, // Preserving these for now
+      experience: window.portfolioData.experience,
       services: window.portfolioData.services,
       projects: window.portfolioData.projects.map((_, i) => ({
         title: document.getElementById(`project-title-${i}`).value,
