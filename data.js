@@ -19,25 +19,25 @@ const portfolioData = {
       "desc": "Architecting complex Discord bot systems and Minecraft server optimizations for high-traffic environments."
     },
     {
+      "date": "2024 - 2025",
+      "title": "Freelance Developer",
+      "desc": "Delivered 50+ custom projects ranging from automation tools to responsive web applications. Started doing web development."
+    },
+    {
       "date": "2023 - 2024",
-      "title": "Lead Developer",
-      "desc": "Architecting complex Discord bot systems and Minecraft server optimizations for high-traffic environments."
+      "title": "Community Manager & Tech Lead",
+      "desc": "Managed large-scale Minecraft communities, handling both technical infrastructure and community growth."
     },
     {
       "date": "2021 - 2023",
-      "title": "Freelance Developer",
-      "desc": "Delivered 50+ custom projects ranging from automation tools to responsive web applications."
-    },
-    {
-      "date": "2020 - 2021",
-      "title": "Community Manager & Tech Lead",
-      "desc": "Managed large-scale Minecraft communities, handling both technical infrastructure and community growth."
+      "title": "Starting Developer",
+      "desc": "Started my journey as an Discord Bot developer, and started learning web development."
     }
   ],
   "services": [
     {
       "title": "Discord Bots",
-      "desc": "Moderation, economy, tickets, automation systems. Built with Python and JavaScript."
+      "desc": "Moderation, tickets, automation systems. Built with Python and JavaScript."
     },
     {
       "title": "Discord Servers",
@@ -48,8 +48,8 @@ const portfolioData = {
       "desc": "Plugin systems, performance optimization and custom server infrastructure."
     },
     {
-      "title": "Web Dev",
-      "desc": "Modern responsive UI and frontend systems. Focus on performance and clean code."
+      "title": "Web Development",
+      "desc": "Modern responsive UI and frontend systems. Web applications and websites focused on performance and clean code."
     }
   ],
   "projects": [
@@ -58,8 +58,8 @@ const portfolioData = {
       "desc": "Order custom Discord Bots."
     },
     {
-      "title": "SkyBlock Engine",
-      "desc": "Custom Minecraft plugin suite for highly scalable game modes."
+      "title": "TssY's Pl's",
+      "desc": "Custom Minecraft plugin suite for highly scalable Minecraft servers."
     },
     {
       "title": "Nexus Portal",
