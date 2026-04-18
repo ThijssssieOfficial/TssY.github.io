@@ -472,9 +472,11 @@ h2::before {
 
 .primary, 
 button.primary,
-.btn.primary {
+.btn.primary,
+.overlay-content .btn.primary,
+.dashboard-container button.primary {
   background: #ffffff !important;
-  color: #000000 !important; /* Force black text on white button */
+  color: #000000 !important; /* ULTRA FORCE BLACK TEXT */
 }
 
 .primary::after,
@@ -485,7 +487,9 @@ button.primary::after,
 
 .primary:hover,
 button.primary:hover,
-.btn.primary:hover {
+.btn.primary:hover,
+.overlay-content .btn.primary:hover,
+.dashboard-container button.primary:hover {
   background: #eeeeee !important; 
   color: #000000 !important;
 }
