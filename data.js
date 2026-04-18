@@ -4,7 +4,7 @@ const portfolioData = {
     "sub": "Discord • Minecraft • Developer"
   },
   "about": {
-    "text": "Developer focused on Discord bots, Minecraft systems and modern web applications. Clean architecture, performance-driven logic and scalable systems.",
+    "text": "Developer focused on Discord bots, Minecraft systems and modern web applications. I create polished digital systems that combine reliability, performance and a strong attention to detail.",
     "highlights": [
       "System design focused",
       "Automation & bots",
@@ -16,58 +16,58 @@ const portfolioData = {
     {
       "date": "2026 - Present",
       "title": "Lead Developer",
-      "desc": "Architecting complex Discord bot systems and Minecraft server optimizations for high-traffic environments."
+      "desc": "Designing advanced Discord bot systems and refining Minecraft server performance for established online communities."
     },
     {
       "date": "2024 - 2025",
       "title": "Freelance Developer",
-      "desc": "Delivered 50+ custom projects ranging from automation tools to responsive web applications. Started doing web development."
+      "desc": "Delivered 50+ custom projects ranging from automation tools to modern websites while expanding into full web development."
     },
     {
       "date": "2023 - 2024",
       "title": "Community Manager & Tech Lead",
-      "desc": "Managed large-scale Minecraft communities, handling both technical infrastructure and community growth."
+      "desc": "Oversaw technical systems for large Minecraft communities while supporting long-term stability and community growth."
     },
     {
       "date": "2021 - 2023",
       "title": "Starting Developer",
-      "desc": "Started my journey as an Discord Bot developer, and started learning web development."
+      "desc": "Started with Discord bot development and gradually built a deeper understanding of modern web technologies."
     }
   ],
   "services": [
     {
       "title": "Discord Bots",
-      "desc": "Moderation, tickets, automation systems. Built with Python and JavaScript."
+      "desc": "Custom moderation, ticketing and automation systems developed with Python and JavaScript."
     },
     {
       "title": "Discord Servers",
-      "desc": "Clean setups with roles, structure and configuration. Optimized for user retention."
+      "desc": "Professional server setups with structured roles, channels and configurations built for a better member experience."
     },
     {
       "title": "Minecraft",
-      "desc": "Plugin systems, performance optimization and custom server infrastructure."
+      "desc": "Custom plugins, performance tuning and server infrastructure built for smooth and reliable gameplay."
     },
     {
       "title": "Web Development",
-      "desc": "Modern responsive UI and frontend systems. Web applications and websites focused on performance and clean code."
+      "desc": "Responsive websites and modern interfaces created with clean code, strong performance and refined design."
     }
   ],
   "projects": [
     {
       "title": "Zyro",
-      "desc": "Order custom Discord Bots."
+      "desc": "A platform built for ordering fully custom Discord bots."
     },
     {
       "title": "TssY's Pl's",
-      "desc": "Custom Minecraft plugin suite for highly scalable Minecraft servers."
+      "desc": "Custom Minecraft plugin suite developed for growing multiplayer servers."
     },
     {
       "title": "Nexus Portal",
-      "desc": "A central dashboard for managing multiple game servers and bots."
+      "desc": "A unified dashboard for managing multiple game servers and Discord systems."
     },
     {
       "title": "Task Automator",
-      "desc": "Python-based suite for streamlining repetitive development workflows."
+      "desc": "Python-based tools created to simplify repetitive development workflows."
     }
   ],
   "skills": [
