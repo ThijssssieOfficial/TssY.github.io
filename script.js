@@ -319,7 +319,7 @@ if (loginBtn) {
   loginBtn.onclick = () => {
     const passwordInput = document.getElementById('adminPassword');
     const pass = passwordInput.value;
-    if (pass === 'Boring.123') { 
+    if (pass === 'adminp123') { 
       passwordInput.value = ''; // Clear field on success
       toggleOverlay(adminLoginOverlay, false);
       toggleOverlay(adminDashboard, true);
